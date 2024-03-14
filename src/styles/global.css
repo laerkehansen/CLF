@@ -11,7 +11,7 @@
 /***********fonte************/
 @font-face {
     font-family: Circular Std;
-    src: url();
+    src: url(src/fonts/fontsfree-net-circular-std-book-webfont.woff2);
 }
 @font-face {
     font-family: Source Sans Pro;
@@ -36,3 +36,9 @@
     --headerAndLink-size: 1rem;
 }
 /***********Tekst størrelse************/
+
+
+/***********Styles på body***********/
+body{
+    background-color: var(--primary-color);
+}
