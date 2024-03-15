@@ -1,0 +1,55 @@
+---
+
+---
+
+<div class="introBillede">
+  <img
+    class="forsidebillede"
+    src="/public/forsidebillede.png"
+    alt="forsidebillede"
+  />
+  <h1 class="Overskrift">COPENHAGEN LIGHT FESTIVAL</h1>
+  <h2 class="Underoverskrift">02-25 FEBRUAR</h2>
+</div>
+
+<style>
+  h1 {
+    font-family: Source Sans Pro;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-family: Source Sans Pro;
+    color: white;
+  }
+
+  .Overskrift {
+    grid-column: 2/3;
+    grid-row: 1;
+    padding-bottom: 20px;
+  }
+
+  .forsidebillede {
+    grid-column: 1/3;
+    grid-row: 1;
+  }
+
+  .Underoverskrift {
+    grid-column: 2/3;
+    grid-row: 1;
+    padding-bottom: 20px;
+  }
+
+  .introBillede {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: end;
+  }
+
+  img {
+    max-width: 100%;
+  }
+</style>
