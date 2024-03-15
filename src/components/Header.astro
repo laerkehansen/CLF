@@ -1,5 +1,10 @@
+---
+import SignUp from "../components/Sign_up.astro";
+---
+
 <header>
   <img src="/logo.svg" alt="logo" />
+  <div class="signUp">
   <nav>
     <ul>
       <li><a href="#">PROGRAM</a></li>
@@ -9,9 +14,15 @@
       <li><a href="#">OM OS</a></li>
     </ul>
   </nav>
+  <SignUp />
+</div>
 </header>
 
 <style>
+  .signUp{
+    display: flex;
+    justify-content:end ;
+  }
   header {
     display: flex;
     flex-direction: row;
