@@ -1,23 +1,26 @@
 ---
 import "../styles/global.css";
 import Header from "../components/Header.astro";
-import Filter from "../components/Filter.astro";
 import Hoverbillede from "../components/Hoverbillede.astro"
+import Filter from "../components/Filter.astro";
+import SignUp from "../components/Sign_up.astro"
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<Header></Header>
-		<main>
-			<Hoverbillede/>
-		</main>
-		<footer></footer>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Astro</title>
+  </head>
+  <body>
+    <header>
+      <Header />
+    </header>
+    <main>
+		<Filter/>
+		<SignUp/>
+	</main>
+  </body>
 </html>
