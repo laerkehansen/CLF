@@ -1,9 +1,9 @@
 /*************farver***********/
-:root{
---primary-color: rgba(15, 15, 15, 1);
---secondary-color: rgba(245, 245, 245, 1);
---accent-color: rgba(140, 97, 246, 1);
---tertier-color:  rgba(26, 26, 26, 1);
+:root {
+  --primary-color: rgba(15, 15, 15, 1);
+  --secondary-color: rgba(245, 245, 245, 1);
+  --accent-color: rgba(140, 97, 246, 1);
+  --tertier-color: rgba(26, 26, 26, 1);
 }
 /*************farver***********/
 
@@ -32,8 +32,9 @@
 :root {
   --h1-size: 4rem;
   --h2-size: 2.6rem;
+  --h3-size: 2rem;
   --p-size: 1.4rem;
-  --footer-size: 1.25rem;
+  --footer-size: 0.25rem;
   --headerAndLink-size: 1rem;
 }
 /***********Tekst størrelse************/
@@ -41,4 +42,20 @@
 /***********Styles på body***********/
 body {
   background-color: var(--primary-color);
+}
+
+h2 {
+  font-family: Circular Std;
+  font-size: var(--h2-size);
+  color: white;
+}
+
+p {
+  font-family: Circular Std;
+  font-size: var(--p-size);
+  color: white;
+}
+
+img {
+  max-width: 100%;
 }

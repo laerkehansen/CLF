@@ -4,32 +4,30 @@ import SignUp from "../components/Sign_up.astro";
 
 <header>
   <img src="/logo.svg" alt="logo" />
-  <div class="signUp">
-  <nav>
-    <ul>
-      <li><a href="#">PROGRAM</a></li>
-      <li><a href="#">EVENTS</a></li>
-      <li><a href="#">KORT</a></li>
-      <li><a href="#">KONTAKT</a></li>
-      <li><a href="#">OM OS</a></li>
-    </ul>
-  </nav>
-  <SignUp />
+    <nav>
+      <ul>
+        <li><a href="../pages/overview.astro">PROGRAM</a></li>
+        <li><a href="#">EVENTS</a></li>
+        <li><a href="#">KORT</a></li>
+        <li><a href="#">KONTAKT</a></li>
+        <li><a href="#">OM OS</a></li>
+      </ul>
+    </nav>
+  <div>
+    <SignUp />
+  </div>
 </div>
 </header>
 
 <style>
-  .signUp{
-    display: flex;
-    justify-content:end ;
-  }
+
   header {
     display: flex;
-    flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
     background-color: var(--primary-color);
     font-family: Circular Std;
     margin: 1rem;
+    align-items: center;
   }
 
   nav a {
