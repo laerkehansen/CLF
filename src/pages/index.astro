@@ -3,7 +3,11 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Hoverbillede from "../components/Hoverbillede.astro";
 import Filter from "../components/Filter.astro";
-import SignUp from "../components/Sign_up.astro";
+import SignUp from "../components/Sign_up.astro";import Knap_download from "../components/Knap_download.astro";
+import LaesMere from "../components/LaesMere.astro";
+import Billede from "../components/Billede.astro";
+import Karrusel from "../components/Karrusel.astro";
+import FotokonkurrenceAfsnit from "../components/FotokonkurrenceAfsnit.astro";
 ---
 
 <html lang="en">
@@ -12,38 +16,16 @@ import SignUp from "../components/Sign_up.astro";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>Forside</title>
   </head>
   <body>
-    <header>
-      <Header />
-    </header>
-    <main>
-      <div class="grid_1-1">
-        <img
-          class="single-billede"
-          src="https://copenhagenlightfestival.org/wp-content/uploads/2024/02/01.-Du-som-er-i-Himlene-scaled.jpg"
-          alt="telt med lys"
-        />
-        <h2 class="destination">Kalvebod Sti ved Robert Jacobsens Vej</h2>
-      </div>
-      <div class="grid_1-4">
-        <div class="overskrift">
-          <h2>01. DU ER SOM HIMLENE </h2>
-        </div>
-        <div class="tekst">
-          <p>Af: Sedemminut (SK)</p>
-          <p>
-            Værket skaber en forbindelse mellem jorden under os og himmelen over
-            os. Mellem det fysiske og det åndelige. Overgivelse til noget, som
-            er højere end os. Et sted, hvor man kan forbinde sig til det, man
-            tror på.
-          </p>
-          <p>Destiantion:  Kalvebod Sti ved Robert Jacobsens Vej</p>
-        </div>
-      </div>
-    </main>
+    <h1>Astro</h1>
   </body>
+  <Billede />
+  <Knap_download />
+  <LaesMere />
+  <Karrusel />
+  <FotokonkurrenceAfsnit />
 </html>
 
 <style>
