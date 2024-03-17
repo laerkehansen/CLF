@@ -3,7 +3,22 @@
   --primary-color: rgba(15, 15, 15, 1);
   --secondary-color: rgba(245, 245, 245, 1);
   --accent-color: rgba(140, 97, 246, 1);
+<<<<<<< HEAD
   --tertier-color: rgba(26, 26, 26, 1);
+=======
+  --tertier-color: rgba(26, 26, 26, 1);}
+:root {
+  --primary-color: rgba(15, 15, 15, 1);
+  --secondary-color: rgba(245, 245, 245, 1);
+  --accent-color: rgba(140, 97, 246, 1);
+  --tertier-color: rgba(26, 26, 26, 1);
+  :root {
+    --primary-color: rgba(15, 15, 15, 1);
+    --secondary-color: rgba(245, 245, 245, 1);
+    --accent-color: rgba(140, 97, 246, 1);
+    --tertier-color: rgba(26, 26, 26, 1);
+  }
+>>>>>>> adf59536e40ddb2dda937b1efa4f9f1c539c0cff
 }
 /*************farver***********/
 
@@ -17,10 +32,16 @@
 @font-face {
   font-family: Source Sans Pro;
   src: url();
+  font-family: Source Sans Pro;
+  src: url();
 }
 /***********fonte************/
 
 /***********Grids************/
+.grid_12-6 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 1fr);}
 .grid_12-6 {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -32,8 +53,9 @@
 :root {
   --h1-size: 4rem;
   --h2-size: 2.6rem;
+  --h3-size: 2rem;
   --p-size: 1.4rem;
-  --footer-size: 1.25rem;
+  --footer-size: 0.25rem;
   --headerAndLink-size: 1rem;
 }
 /***********Tekst størrelse************/
@@ -41,4 +63,20 @@
 /***********Styles på body***********/
 body {
   background-color: var(--primary-color);
+}
+
+h2 {
+  font-family: Circular Std;
+  font-size: var(--h2-size);
+  color: white;
+}
+
+p {
+  font-family: Circular Std;
+  font-size: var(--p-size);
+  color: white;
+}
+
+img {
+  max-width: 100%;
 }
