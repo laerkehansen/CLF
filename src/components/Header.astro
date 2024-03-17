@@ -1,36 +1,46 @@
 ---
-import SignUp from "../components/Sign_up.astro"
+import SignUp from "../components/Sign_up.astro";
 ---
 
 <header>
-  <img src="/logo.svg" alt="logo" />
-  <nav>
-    <ul>
-      <a href="#">PROGRAM</a>
-      <a href="#">EVENTS</a>
-      <a href="#">KORT</a>
-      <a href="#">KONTAKT</a>
-      <a href="#">OM OS</a>
-    </ul>
-  </nav>
-  <SignUp/>
-  
+  <div>
+    <img src="/logo.svg" alt="logo" />
+  </div>
+  <div>
+    <nav>
+      <ul>
+        <a href="#">PROGRAM</a>
+        <a href="#">EVENTS</a>
+        <a href="#">KORT</a>
+        <a href="#">KONTAKT</a>
+        <a href="#">OM OS</a>
+      </ul>
+    </nav>
+  </div>
+  <div>
+    <SignUp />
+  </div>
 </header>
 
 <style>
   header {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1fr;
+    grid-template-rows: 1fr;
     background-color: var(--primary-color);
     font-family: Circular Std;
     margin: 1rem;
   }
-  nav a{
+  nav a {
     padding: 1rem;
   }
 
-  ul, a {
+  nav {
+    display: flex;
+  }
+
+  ul,
+  a {
     list-style: none;
     text-decoration: none;
     color: var(--secondary-color);
