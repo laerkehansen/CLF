@@ -2,17 +2,25 @@
 import SignUp from "../components/Sign_up.astro";
 ---
 
+---
+import SignUp from "../components/Sign_up.astro";
+---
+
 <header>
-  <img src="/logo.svg" alt="logo" />
+  <div>
+    <img src="/logo.svg" alt="logo" />
+    </div>
+  <div>
     <nav>
-      <ul>
-        <li><a href="../pages/overview.astro">PROGRAM</a></li>
-        <li><a href="#">EVENTS</a></li>
-        <li><a href="#">KORT</a></li>
-        <li><a href="#">KONTAKT</a></li>
-        <li><a href="#">OM OS</a></li>
-      </ul>
-    </nav>
+        <ul>
+          <li><a href="../pages/overview.astro">PROGRAM</a></li>
+          <li><a href="#">EVENTS</a></li>
+          <li><a href="#">KORT</a></li>
+          <li><a href="#">KONTAKT</a></li>
+          <li><a href="#">OM OS</a></li>
+        </ul>
+      </nav>
+ </div>
   <div>
     <SignUp />
   </div>
@@ -21,16 +29,20 @@ import SignUp from "../components/Sign_up.astro";
 <style>
 
   header {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1fr;
+    grid-template-rows: 1fr;
     background-color: var(--primary-color);
     font-family: Circular Std;
     margin: 1rem;
     align-items: center;
   }
-
   nav a {
     padding: 1rem;
+  }
+
+  nav {
+    display: flex;
   }
 
   ul,
