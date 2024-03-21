@@ -8,7 +8,7 @@ import LaesMere from "../components/LaesMere.astro";
 import Billede from "../components/Billede.astro";
 import Karrusel from "../components/Karrusel.astro";
 import FotokonkurrenceAfsnit from "../components/FotokonkurrenceAfsnit.astro";
-import Fliterfirkant from "../components/Filterfirkant.astro"
+import Filter2 from "../components/Filter2.astro";
 ---
 
 <html lang="en">
@@ -28,10 +28,17 @@ import Fliterfirkant from "../components/Filterfirkant.astro"
   <LaesMere />
   <Karrusel />
   <FotokonkurrenceAfsnit />
-<Fliterfirkant />
+<Filter2 />
 </html>
 
 <style>
+.filter2 {
+  position: relative;
+  top: 100px;
+  left: 205px;
+  text-decoration: underline; 
+}
+
   .grid_1-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
