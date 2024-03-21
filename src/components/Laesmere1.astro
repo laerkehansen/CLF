@@ -1,0 +1,88 @@
+---
+
+---
+
+<div class="laes_mere">
+  <a class="btn" href="overview"
+    >Læs Mere<p><span class="arrow right"></span></p></a
+  >
+</div>
+<script>
+  document.querySelector(".btn").addEventListener("mouseover", musOver);
+  document.querySelector(".btn").addEventListener("mouseout", musUd);
+  function musOver(evt) {
+    console.log(
+      "MUS OVER",
+      evt.currentTarget.querySelector(".arrow").classList.add("animate")
+    );
+  }
+  function musUd(evt) {
+    console.log(
+      "MUS UD",
+      evt.currentTarget.querySelector(".arrow").classList.remove("animate")
+    );
+  }
+</script>
+<style>
+  .laes_mere {
+    display: flex;
+  }
+  .arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .arrow:hover a i {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 5px;
+  }
+
+  .right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+
+  * {
+    margin: 0%;
+    height: 0%;
+    box-sizing: border-box;
+  }
+
+  a i {
+    font-size: 1.6em;
+    color: white;
+    font-family: Circular Std;
+    margin-left: 50px;
+  }
+
+  a {
+    display: flex;
+    font-size: 1.6em;
+    color: white;
+    font-family: Circular Std;
+  }
+
+  a:hover {
+    color: rgba(140, 97, 246, 1);
+  }
+  .animate {
+    animation: load 1.5s ease-in-out infinite;
+  }
+  a:hover i {
+    color: rgba(140, 97, 246, 1);
+  }
+
+  @keyframes load {
+    0%,
+    100% {
+      margin-left: 50px;
+    }
+    50% {
+      margin-left: 10px;
+    }
+  }
+</style>

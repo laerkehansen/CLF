@@ -1,5 +1,6 @@
 ---
-
+import Knap_download from "../components/Knap_download.astro";
+import Laesmere1 from "../components/Laesmere1.astro";
 ---
 
 <div class="grid_1-1">
@@ -12,10 +13,13 @@
       – med os og med en jury, som vil nominere 25 billeder, der samles i en
       fotoudstilling om Copenhagen Light Festival 2024.
     </p>
+    <div>
+      <Laesmere1 />
+    </div>
   </div>
 </div>
 
-<div class="grid_1-1">
+<div class="grid_1-2">
   <div>
     <h1>GUIDEDE TURE</h1>
     <p>
@@ -25,28 +29,77 @@
       De guidede gåture gik gennem hjertet af København og bød på inspirerende fortællinger
       bag hvert værk, fortalt af kyndige guides fra lysfestivalen.
     </p>
+    <div>
+      <Laesmere1 />
+    </div>
   </div>
   <img src="/public/gatur.png" alt="gatur" />
 </div>
+
+<div class="grid_1-3">
+  <img class="mobil" src="/public/Mapmobil.png" alt="mobil" />
+  <div>
+    <h1>TJEK APPEN UD</h1>
+    <h2>Mere information du kan finde i appen</h2>
+    <ul>
+      <li>Lokaliser alle værker fra din position</li>
+      <li>Følg en rute enten på gåben, i bus eller i bil.</li>
+      <li>Find tekst der beskriver kunsterne og værkerne</li>
+      <li>
+        Deltag i skattejagten og nyd en gratis sodavand når du har besøgt 25 af
+        værkerne.
+      </li>
+    </ul>
+    <br />
+    <Knap_download />
+  </div>
+</div>
+
 <style>
-  h1 {
-    font-family: Circular Std;
-    color: black;
-    letter-spacing: 2px;
-    font-size: 3rem;
-  }
-
-  p {
-    font-family: Circular Std;
-    color: black;
-  }
-
   .grid_1-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+  }
+
+  .grid_1-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 40px;
+  }
+  .grid_1-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    padding-right: 40px;
+    padding-top: 40px;
   }
 
   body {
     background-color: black;
+  }
+  h1 {
+    font-family: Circular Std;
+    color: white;
+  }
+
+  li {
+    font-family: Circular Std;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .mobil {
+    max-width: 50%;
+  }
+
+  ul {
+    text-decoration: none;
   }
 </style>
