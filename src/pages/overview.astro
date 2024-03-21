@@ -1,8 +1,10 @@
 ---
-import Filter2 from "../components/Filter2.astro";
-import "../styles/global.css";
-import Layout from "../layouts/Layout.astro";
-import Card2 from "../components/Card2.astro";
+import "../styles/global.css"
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Filterfirkant from "../components/Filterfirkant.astro";
+import Filterlinje from "../components/Filterlinje.astro";
+import Filter from "../components/Filter.astro";
 
 const data = await fetch(
   "https://yolkpeygayphxalvegly.supabase.co/rest/v1/CLF",
@@ -45,5 +47,58 @@ console.log(data);
       top: 100px;
       left: 205px;
     }
+    .vaerker {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: hidden;
+    gap: var(--gap);
+  }
+  .grid_1-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr 1fr;
+  }
+
+  .overskrift {
+    grid-column: 1/3;
+    grid-row: 1;
+    padding-left: 20px;
+  }
+
+  .tekst {
+    grid-column: 2/5;
+    grid-row: 2;
+    padding-right: 120px;
+  }
+
+  .destination {
+    grid-row: 1;
+    grid-column: 1/2;
+    justify-items: end;
+    display: grid;
+    padding-right: 170px;
+  }
+
+  .single-billede {
+    grid-row: 1;
+    grid-column: 1/2;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .grid_1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-items: end;
+  }
   </style>
 </html>
+
+<style>
+
+
+
+</style>
