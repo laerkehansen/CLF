@@ -10,18 +10,6 @@ import Karrusel from "../components/Karrusel.astro";
 import FotokonkurrenceAfsnit from "../components/FotokonkurrenceAfsnit.astro";
 import Layout from "../layouts/Layout.astro";
 import Card2 from "../components/Card2.astro";
-
-const data = await fetch(
-  "https://yolkpeygayphxalvegly.supabase.co/rest/v1/CLF",
-  {
-    method: "GET",
-    headers: {
-      apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlvbGtwZXlnYXlwaHhhbHZlZ2x5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0NDQ5NzQsImV4cCI6MjAyNjAyMDk3NH0.i1vJllfxe1Cazr13Od2VvNH5yxxlFU47b_NqGe-6IIo",
-    },
-  }
-).then((res) => res.json());
-console.log(data);
 ---
 
 <Layout>
@@ -30,14 +18,6 @@ console.log(data);
   <LaesMere />
   <Karrusel />
   <FotokonkurrenceAfsnit />
-
-  <section class="vaerker">
-    {
-      data.map((vaerk) => {
-        return <Card2 data={vaerk} />;
-      })
-    }
-  </section>
 </Layout>
 
 <style>

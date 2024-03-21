@@ -3,6 +3,18 @@ import Filter2 from "../components/Filter2.astro";
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import Card2 from "../components/Card2.astro";
+
+const data = await fetch(
+  "https://yolkpeygayphxalvegly.supabase.co/rest/v1/CLF",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlvbGtwZXlnYXlwaHhhbHZlZ2x5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0NDQ5NzQsImV4cCI6MjAyNjAyMDk3NH0.i1vJllfxe1Cazr13Od2VvNH5yxxlFU47b_NqGe-6IIo",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
 ---
 
 <html lang="en">
@@ -18,6 +30,13 @@ import Card2 from "../components/Card2.astro";
       <Card2 />
     </Layout>
     <Filter2 />
+    <section class="vaerker">
+        {
+          data.map((vaerk) => {
+            return <Card2 data={vaerk} />;
+          })
+        }
+      </section>
   </body>
 
   <style>
