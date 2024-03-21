@@ -9,28 +9,45 @@ import LaesMere from "../components/LaesMere.astro";
 import Billede from "../components/Billede.astro";
 import Karrusel from "../components/Karrusel.astro";
 import FotokonkurrenceAfsnit from "../components/FotokonkurrenceAfsnit.astro";
+import Layout from "../layouts/Layout.astro";
+import Card2 from "../components/Card2.astro";
+
+const data = await fetch(
+  "https://yolkpeygayphxalvegly.supabase.co/rest/v1/CLF",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlvbGtwZXlnYXlwaHhhbHZlZ2x5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA0NDQ5NzQsImV4cCI6MjAyNjAyMDk3NH0.i1vJllfxe1Cazr13Od2VvNH5yxxlFU47b_NqGe-6IIo",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Forside</title>
-  </head>
-  <body
-    ><Header />
-    <h1>Astro</h1>
-  </body>
+<Layout>
   <Billede />
   <Knap_download />
   <LaesMere />
   <Karrusel />
   <FotokonkurrenceAfsnit />
-</html>
+
+  <section class="vaerker">
+    {
+      data.map((vaerk) => {
+        return <Card2 data={vaerk} />;
+      })
+    }
+  </section>
+</Layout>
 
 <style>
+  .vaerker {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: hidden;
+    gap: var(--gap);
+  }
   .grid_1-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -63,7 +80,7 @@ import FotokonkurrenceAfsnit from "../components/FotokonkurrenceAfsnit.astro";
   }
 
   img {
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .grid_1-1 {
