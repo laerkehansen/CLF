@@ -2,32 +2,29 @@
 import SignUp from "../components/Sign_up.astro";
 ---
 
----
-import SignUp from "../components/Sign_up.astro";
----
-
 <header>
   <div>
-    <img src="/logo.svg" alt="logo" />
-    </div>
+    <a href="/">
+      <img src="/logo.svg" alt="logo" />
+    </a>
+  </div>
   <div>
     <nav>
-        <ul>
-          <li><a href="../pages/overview.astro">PROGRAM</a></li>
-          <li><a href="#">EVENTS</a></li>
-          <li><a href="#">KORT</a></li>
-          <li><a href="#">KONTAKT</a></li>
-          <li><a href="#">OM OS</a></li>
-        </ul>
-      </nav>
- </div>
+      <ul>
+        <li><a href="/overview">PROGRAM</a></li>
+        <li><a href="/overview">EVENTS</a></li>
+        <li><a href="/">KORT</a></li>
+        <li><a href="/">KONTAKT</a></li>
+        <li><a href="/">OM OS</a></li>
+      </ul>
+    </nav>
+  </div>
   <div class="Signup">
     <SignUp />
   </div>
 </header>
 
 <style>
-
   header {
     display: grid;
     grid-template-columns: 0.5fr 3fr 1fr;
@@ -56,7 +53,7 @@ import SignUp from "../components/Sign_up.astro";
     display: flex;
   }
 
-  .Signup{
+  .Signup {
     padding-left: 170px;
   }
 </style>

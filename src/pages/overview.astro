@@ -1,5 +1,8 @@
 ---
 import Filter2 from "../components/Filter2.astro";
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Card2 from "../components/Card2.astro";
 ---
 
 <html lang="en">
@@ -10,16 +13,18 @@ import Filter2 from "../components/Filter2.astro";
     <meta name="generator" content={Astro.generator} />
     <title>Forside</title>
   </head>
-  <body
-    >
-<Filter2 />
+  <body>
+    <Layout>
+      <Card2 />
+    </Layout>
+    <Filter2 />
+  </body>
+
+  <style>
+    .Filter2 {
+      position: relative;
+      top: 100px;
+      left: 205px;
+    }
+  </style>
 </html>
-
-<style>
-.Filter2 {
-  position: relative;
-  top: 100px;
-  left: 205px;
-
-  
-}
