@@ -7,7 +7,6 @@ import Filterlinje from "../components/Filterlinje.astro";
 import Filter from "../components/Filter.astro";
 import Card2 from "../components/Card2.astro";
 import Layout from "../layouts/Layout.astro";
-import Filter2 from "../components/Filter2.astro";
 
 const data = await fetch(
   "https://yolkpeygayphxalvegly.supabase.co/rest/v1/CLF",
@@ -31,10 +30,14 @@ console.log(data);
     <title>Forside</title>
   </head>
   <body>
+    <Header />
     <Layout>
       <Card2 />
     </Layout>
-    <Filter2 />
+    <Filterfirkant />
+    <Filterlinje />
+    <Filter />
+    <Footer />
     <section class="vaerker">
       {
         data.map((vaerk) => {
