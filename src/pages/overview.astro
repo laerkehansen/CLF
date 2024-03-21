@@ -1,5 +1,10 @@
 ---
-import Filter2 from "../components/Filter2.astro";
+import "../styles/global.css"
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Filterfirkant from "../components/Filterfirkant.astro";
+import Filterlinje from "../components/Filterlinje.astro";
+import Filter from "../components/Filter.astro";
 ---
 
 <html lang="en">
@@ -12,14 +17,18 @@ import Filter2 from "../components/Filter2.astro";
   </head>
   <body
     >
-<Filter2 />
+    <Header />
+    <h1>COPENHAGEN LIGHT FESTIVAL</h1>
+<h1>PROGRAM 2024</h1>
+<h2>02-25 FEBRUAR</h2>
+<Filterfirkant />
+<Filterlinje />
+<Filter />
+<Footer />
 </html>
 
 <style>
-.Filter2 {
-  position: relative;
-  top: 100px;
-  left: 205px;
 
-  
-}
+
+
+</style>

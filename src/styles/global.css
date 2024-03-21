@@ -63,6 +63,11 @@
 body {
   background-color: var(--primary-color);
 }
+h1 {
+  font-family: Circular Std;
+  font-size: var(--h1-size);
+  color: white;
+}
 
 h2 {
   font-family: Circular Std;
